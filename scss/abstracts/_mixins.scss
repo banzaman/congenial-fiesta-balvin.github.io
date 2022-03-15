@@ -1,0 +1,25 @@
+@use '../vendors/include-media' as mq;
+@use 'variables' as *;
+
+@mixin font-styler ($family: $lato, $size: $s-lg, $weight: 400, $color: $secondary-color, $line-height: $s-lg-em) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line-height;
+  max-width: 60ch;
+}
+
+@mixin max-width {
+  width: 100%;
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: inherit;
+  flex-direction: inherit;
+  align-content: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  gap: inherit;
+  column-gap: inherit;
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  background: $light-color;
+  border: $accent-color 1px solid;
+  padding: $s-md 0;
+  border-radius: 0.4rem;
+
+  @include font-styler;
+
+  & .fas {
+    margin-left: $s-md;
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,228 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+// @include mq.media('>=tablet') {}
+
+.about {
+  min-height: 90vh;
+  padding: $s-llg-em $s-xl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $accent-lighter-color;
+  position: relative;
+  z-index: -1;
+
+  @include mq.media('>=tablet') {
+    padding: 11em $s-xl $s-llg-em;
+  }
+
+  &__title-bg-1 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: url(../assets/img/home/home-desktop.png) 0% 50% repeat-y;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+    transform: scaleX(-1);
+
+    @include mq.media('>=tablet') {
+      background: url(../assets/img/home/home-desktop.png) 50% 25% no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    & h2 {
+      @include font-styler ($lato, $s-xl, $color: $primary-color);
+
+      margin-bottom: $s-xs-em;
+      text-align: center;
+
+      @include mq.media('>=tablet') {
+        display: none;
+      }
+    }
+
+    & h1 {
+      @include font-styler ($cocogoose, $s-xxxl, 900, $line-height: $s-md-em, $color: $primary-color);
+
+      margin-bottom: $s-xs-em;
+      text-align: center;
+
+      @include mq.media('>=tablet') {
+        font-size: $s-llg;
+        max-width: 15ch;
+      }
+    }
+  }
+
+  &__title-decor {
+    display: none;
+
+    @include mq.media('>=tablet') {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__desc {
+    @include font-styler;
+
+    border: $accent-color 0.1rem solid;
+    padding: $s-md-em $s-xl;
+    background: $light-color;
+    text-align: center;
+    max-width: 60ch;
+    margin: 0 auto;
+    margin-bottom: $s-lg-em;
+
+    @include mq.media('>=tablet') {
+      margin-bottom: $s-xxxl-em;
+      padding: $s-xl-em $s-xll;
+    }
+  }
+
+  &__location {
+    @include font-styler;
+
+    text-align: center;
+  }
+}
+
+.logo-info {
+  padding: $s-xxl-em $s-xl;
+  background: $light-color;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: rgba($secondary-color, 0.2) 1px solid;
+  border-bottom: rgba($secondary-color, 0.2) 1px solid;
+
+  &__title {
+    margin-bottom: $s-xxs-em;
+    text-align: center;
+  }
+
+  & p {
+    @include font-styler($color: $dark-color);
+
+    flex: 1 0 50%;
+    text-align: center;
+    margin-bottom: $s-lg-em;
+  }
+
+  &__logo-container {
+    width: 100%;
+    max-width: 50rem;
+    padding: $s-xl $s-xxl;
+    border: rgba($secondary-color, 0.2) 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    position: relative;
+    top: 0.3rem;
+    right: 0.3rem;
+  }
+}
+
+.past {
+  padding: $s-xxl-em $s-xl;
+  background: $light-color;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: $s-xxs-em;
+    text-align: center;
+  }
+
+  &__desc {
+    @include font-styler($color: $dark-color);
+
+    flex: 1 0 50%;
+    text-align: center;
+    margin-bottom: $s-lg-em;
+  }
+
+  &__events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: $s-lg-em;
+
+    @include mq.media('>=tablet') {
+      flex-direction: row;
+      gap: $s-xl;
+      margin-bottom: $s-llg;
+    }
+  }
+
+  &__events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $s-xxxl-em $s-md;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    transition: background-size $speed1 ease-in-out;
+
+    &--arg {
+      background: $primary-color url(../assets/img/past/argentina.jpg) 50% 50% no-repeat;
+      background-size: 110%;
+    }
+
+    &--pol {
+      background: $primary-color url(../assets/img/past/poland.jpg) 50% 20% no-repeat;
+      background-size: 110%;
+    }
+
+    &:hover,
+    &:active {
+      background-size: 117%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($primary-color, 0.5);
+    }
+  }
+
+  &__year {
+    @include font-styler($color: $light-color, $size: $s-xxl, $weight: 700);
+
+    margin-bottom: $s-xxs-em;
+    z-index: 2;
+
+    @include mq.media('>=tablet') {
+      font-size: $s-xxxl;
+    }
+  }
+
+  &__event-desc {
+    @include font-styler($size: $s-xl, $color: $light-color, $weight: 700);
+
+    text-align: center;
+    z-index: 2;
+  }
+}

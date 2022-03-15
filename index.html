@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://kit.fontawesome.com/d5e3631d2a.js" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- N A V B A R -->
+  <nav class="navbar-black only-desktop">
+    <div class="navbar-black__container mw-container">
+      <ul class="navbar-black__media" role="list">
+        <li class="navbar-black__icon"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+        <li class="navbar-black__icon"><a href="#"><span class="fab fa-twitter"></span></a></li>
+      </ul>
+      <span class="navbar-black__lenguage"><a href="">English</a></span><a href=""></a>
+      <span class="navbar-black__profile"><a href="">My page</a></span>
+      <span class="navbar-black__log"><a href="">Log out</a></span>
+    </div>      
+  </nav>
+  <header class="sticky">
+    <nav class="navbar">
+      <div class="navbar__toggler-container">
+        <div class="navbar__toggler toggler"></div>
+      </div>
+      <div class="navbar__container mw-container mw-container--navbar">
+        <div class="navbar__logo">
+          <a href="#">
+            <img src="./assets/img/partners/scLogo.svg" height="100" width="100" alt="SC Identifier" class="navbar__img-logo">
+          </a>
+        </div>
+        <ul class="navbar__links navbar__links--mobile" role="list">
+          <li class="navbar__item navbar__item--active navbar__item--SC"><a href="#">SC Summit</a></li>
+          <li class="navbar__item"><a href="pages/about.html">About</a></li>
+          <li class="navbar__item"><a href="#">Program</a></li>
+          <li class="navbar__item"><a href="#">Join</a></li>
+          <li class="navbar__item"><a href="#">Sponsor</a></li>
+          <li class="navbar__item"><a href="#">News</a></li>
+        </ul>
+      </div>      
+    </nav>
+  </header>
+  <main>
+    <!-- H O M E  -->
+    <section id="home" class="home">
+      <div class="mw-container">
+        <div class="home__title-bg-1"></div>
+        <div class="home__title-bg-2"></div>
+        <hgroup class="home__title">
+          <h2>"Hello! Fellow Adventurer"</h2>
+          <h1>SURVIVAL CAMP GLOBAL SUMMIT 2022</h1>
+        </hgroup>
+        <p class="home__desc">A joyful camp believing in the value of openness and sharing, creating a positive change with people from over 80 countries is taking place in October, in USA.</p>
+        <p class="home__date">2022.10.15(THU) ~ 18(SUN)</p>
+        <p class="home__location">@ Yosemite National Park in California's Sierra Nevada mountains.</p>           
+      </div>
+    </section>
+    <!-- A C T I V I T I E S -->
+    <section id="activities" class="activities">
+      <div class="mw-container">
+        <h2 class="activities__title">Activities</h2>
+      <span class="title-decor"></span>
+      
+      <ul class="activities__list" role="list">
+        <li class="activities__card">
+          <h3 class="activities__subtitle">
+            <i class="activities__icon fas fa-campground fa-fw"></i>
+            Camping
+          </h3>
+          <div class="activities__deco"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum.</p>
+        </li>
+
+        <li class="activities__card">        
+          <h3 class="activities__subtitle">
+            <i class="activities__icon fas fa-hiking fa-fw"></i>
+            Hiking
+          </h3>
+          <div class="activities__deco"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum.</p>
+        </li>
+
+        <li class="activities__card">
+          <h3 class="activities__subtitle">
+            <i class="activities__icon fas fa-meteor fa-fw"></i>
+            Star Gazing
+          </h3>
+          <div class="activities__deco"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum.</p>
+        </li>
+
+        <li class="activities__card">
+          <h3 class="activities__subtitle">
+            <i class="activities__icon fas fa-crow fa-fw"></i>
+            Wildlife Photography
+          </h3>
+          <div class="activities__deco"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum.</p>
+        </li>
+
+        <li class="activities__card activities__card--last">
+          <h3 class="activities__subtitle">
+            <i class="activities__icon fas fa-fire-alt fa-fw"></i>
+            Mastering Techniques
+          </h3>
+          <div class="activities__deco"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum.</p>
+        </li>   
+      </ul>      
+      <a href="#" class="activities__program">See the whole program</a>
+      <a href="#" class="activities__button button button-orange">Join SC Global Summit 2022</a>
+      </div>
+    </section>
+    <!-- G U E S T S -->
+    <section id="guests" class="guests">
+      <div class="mw-container">
+        <h2 class="guests__title">Featured Guests</h2>
+      <span class="title-decor"></span>
+      <ul class="guests__list" role="list">
+        <!-- To be filled dynamically with js -->
+      </ul>
+      <button type="button" class="accordion guests__accordion guests__accordion--collapsed">MORE<span class="fas fa-chevron-down"></span></button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <!-- P A R T N E R S -->
+    <section class="partners">
+      <div class="mw-container">
+        <h2 class="partners__title">Partner</h2>
+        <span class="title-decor"></span>
+        <ul class="partners__list" role="list">
+          <li class="partners__img-container">
+            <img src="./assets/img/partners/partner-1.svg" height="100" width="130" alt="Nasa" class="partners__img">
+          </li>
+          <li class="partners__img-container">
+            <img src="./assets/img/partners/partner-2.svg" height="100" width="150" alt="Mozilla" class="partners__img">
+          </li>
+          <li class="partners__img-container">
+            <img src="./assets/img/partners/partner-5.svg" height="100" width="150" alt="Redbull" class="partners__img">
+          </li>
+          <li class="partners__img-container">
+            <img src="./assets/img/partners/partner-4.svg" height="100" width="150" alt="Facebook" class="partners__img">
+          </li>
+          <li class="partners__img-container">
+            <img src="./assets/img/partners/partner-3.svg" height="100" width="150" alt="Tesla" class="partners__img">
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- F O O T E R -->
+    <section class="footer">
+      <div class="mw-container">
+        <div class="footer__img">
+          <img src="./assets/img/partners/scLogo.svg" height="100" width="125" alt="">
+        </div>
+        <p class="footer__desc">2015 Survival Camp California.<br>Some Rights Reserved.</p>
+      </div>
+    </section>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

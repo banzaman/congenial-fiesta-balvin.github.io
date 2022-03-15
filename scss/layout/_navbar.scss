@@ -1,0 +1,217 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+
+.body--overflow {
+  @include mq.media('<tablet') {
+    overflow: hidden;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.navbar-black {
+  min-width: 100%;
+  padding: $s-xxs-em $s-xxl;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  background: $secondary-color;
+  z-index: 4;
+
+  &__container {
+    max-width: 110rem;
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-left: $s-xl;
+    color: $light-color;
+  }
+
+  & > div > span {
+    @include font-styler($color: $light-color);
+
+    margin-left: $s-xxxl;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.navbar {
+  padding: $s-xl-em $s-xl;
+  position: fixed;
+  top: 0;
+  // left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition:
+    padding $speed1 ease-in-out,
+    background-color $speed1 ease-in-out,;
+
+  @include mq.media('>=tablet') {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: initial;
+    background-color: $light-color;
+    padding: $s-lg-em $s-xl;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &--scrolled {
+    background-color: rgba($secondary-color, 1);
+    padding: $s-lg-em $s-xl;
+
+    @include mq.media('>=tablet') {
+      background-color: $light-color;
+      padding: $s-xs-em $s-xl;
+    }
+  }
+
+  &__toggler-container {
+    position: fixed;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-height: 1.9rem;
+    z-index: 1;
+
+    @include mq.media('>=tablet') {
+      visibility: hidden;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    max-width: 110rem;
+    min-height: 0;
+    background-color: rgba($light-color, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $s-llg-em $s-xl;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      visibility 0s,
+      opacity $speed1 ease-in-out,
+      width $speed1 ease-in-out,;
+
+    @include mq.media('>=tablet') {
+      visibility: visible;
+      opacity: 1;
+      width: 100%;
+      position: static;
+      background-color: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      flex-direction: row;
+      padding: 0;
+    }
+
+    &--active {
+      width: 100%;
+      min-height: 100vh;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__links {
+    @include mq.media('>=tablet') {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding: $s-md-em $s-lg;
+
+    @include font-styler($size: $s-xl, $color: $primary-color-2d);
+
+    cursor: pointer;
+
+    @include mq.media('>=tablet') {
+      @include font-styler($size: $s-lg, $color: $primary-color-2d);
+    }
+
+    @include mq.media('>=desktop') {
+      @include font-styler($size: 1.6rem, $color: $primary-color-2d);
+
+      padding: $s-md-em $s-xxl;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &--active {
+      color: $primary-color;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: $s-md;
+        width: 4rem;
+        height: 0.2rem;
+        background: $primary-color;
+        margin-bottom: 0;
+
+        @include mq.media('>=tablet') {
+          content: none;
+        }
+      }
+    }
+
+    &--SC {
+      @include mq.media('>=tablet') {
+        border: $primary-color 0.2rem solid;
+        order: 1;
+        margin-left: $s-xl;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    order: 1;
+
+    @include mq.media('>=tablet') {
+      order: initial;
+      display: flex;
+      align-items: center;
+      padding-left: $s-lg;
+    }
+  }
+
+  &__img-logo {
+    padding: 0 $s-lg;
+    width: auto;
+    max-height: 4.5rem;
+
+    @include mq.media('>=tablet') {
+      padding: 0;
+    }
+  }
+}
