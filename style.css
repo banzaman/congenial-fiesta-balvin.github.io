@@ -25,6 +25,62 @@ body {
   line-height: 1.5;
 }
 
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "cocogoose";
+  src: url(../assets/fonts/cocogoose/cocogoose-webfont.woff);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "cocogoose";
+  src: url(../assets/fonts/cocogoose/cocogoose-Italic.ttf);
+  font-style: italic;
+}
+html {
+  font-size: 62.5%;
+  font-family: "lato", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 .mw-container {
   width: 100%;
   max-width: 96rem;
