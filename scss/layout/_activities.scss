@@ -38,8 +38,7 @@
     border: transparent 4px solid;
     transition:
       border-color $speed1 ease-in-out,
-      top $speed1 ease-out,
-    ;
+      top $speed1 ease-out,;
 
     &:hover {
       border: $light-color 3px solid;
@@ -92,7 +91,9 @@
     flex: 1 0 55%;
     display: flex;
     align-items: center;
+
     @include font-styler($size: $s-xl, $color: $secondary-color, $weight: 700);
+
     margin-bottom: $s-xs-em;
     text-align: left;
 
@@ -107,6 +108,7 @@
 
   & p {
     @include font-styler($color: $light-color, $size: $s-lg);
+
     text-align: center;
     max-width: 40ch;
     flex: 1 0 30%;
@@ -120,7 +122,9 @@
 
   &__program {
     margin-top: $s-xl-em;
+
     @include font-styler($color: $light-color, $size: $s-xl);
+
     text-transform: uppercase;
     text-decoration: none;
 

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
- * {
+* {
   box-sizing: border-box;
   margin: 0;
 }
@@ -13,6 +13,11 @@ ol[role=list] {
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: "lato", sans-serif;
+}
+
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -23,6 +28,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-size: 1.6rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -54,31 +60,25 @@ select {
   }
 
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+
 @font-face {
   font-family: "cocogoose";
   src: url(../assets/fonts/cocogoose/cocogoose-webfont.woff);
   font-weight: 900;
 }
+
 @font-face {
   font-family: "cocogoose";
   src: url(../assets/fonts/cocogoose/cocogoose-Italic.ttf);
   font-style: italic;
-}
-html {
-  font-size: 62.5%;
-  font-family: "lato", sans-serif;
-}
-
-body {
-  font-size: 1.6rem;
 }
 
 .mw-container {
@@ -242,6 +242,7 @@ body {
   position: relative;
   z-index: -2;
 }
+
 .home__title-bg-1 {
   top: 0;
   left: 0;
@@ -351,6 +352,7 @@ body {
   border: transparent 4px solid;
   transition: border-color 200ms ease-in-out, top 200ms ease-out;
 }
+
 .activities__card:hover {
   border: #fff 3px solid;
   top: -0.707rem;
@@ -399,7 +401,6 @@ body {
   line-height: 1.414em;
   max-width: 60ch;
   text-align: center;
-  max-width: 40ch;
   flex: 1 0 30%;
 }
 
@@ -414,6 +415,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .activities__program:hover {
   color: #1bc54b;
   text-decoration: underline;
@@ -427,6 +429,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .guests__title {
   margin-bottom: 0.354em;
 }
@@ -451,6 +454,7 @@ body {
   position: relative;
   margin-right: 1.999rem;
 }
+
 .guests__decor-img {
   display: block;
   width: 55%;
@@ -460,6 +464,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .guests__img {
   z-index: 2;
   position: absolute;
@@ -467,6 +472,7 @@ body {
   right: 0;
   bottom: 0;
 }
+
 .guests__name {
   font-family: "lato", sans-serif;
   font-size: 1.999rem;
@@ -476,6 +482,7 @@ body {
   max-width: 60ch;
   margin-bottom: 0.5em;
 }
+
 .guests__role {
   font-family: "lato", sans-serif;
   font-size: 1.414rem;
@@ -486,6 +493,7 @@ body {
   font-style: italic;
   margin-bottom: 0.707em;
 }
+
 .guests__desc {
   font-family: "lato", sans-serif;
   font-size: 1rem;
@@ -507,6 +515,7 @@ body {
 .partners__title {
   margin-bottom: 0.354em;
 }
+
 .partners__list {
   width: 100%;
   display: flex;
@@ -541,9 +550,11 @@ body {
 .footer__img {
   width: fit-content;
 }
+
 .footer__img img {
   max-height: 10rem;
 }
+
 .footer__desc {
   font-family: "lato", sans-serif;
   font-size: 1rem;
@@ -562,6 +573,7 @@ body {
   top: 0;
   transition: transform 200ms ease-in-out, top 200ms ease-in-out;
 }
+
 .toggler::after {
   content: "";
   display: block;
@@ -573,6 +585,7 @@ body {
   opacity: 1;
   transition: opacity 200ms ease-in-out;
 }
+
 .toggler::before {
   content: "";
   display: block;
@@ -583,23 +596,29 @@ body {
   top: 0.8rem;
   transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, top 200ms ease-in-out;
 }
+
 .toggler--scrolled {
   background-color: #fff;
 }
+
 .toggler--scrolled::after {
   background-color: #fff;
 }
+
 .toggler--scrolled::before {
   background-color: #fff;
 }
+
 .toggler--active {
   background-color: #272a31;
   transform: rotate(135deg);
 }
+
 .toggler--active::after {
   background-color: #272a31;
   opacity: 0;
 }
+
 .toggler--active::before {
   background-color: #272a31;
   transform: rotate(90deg);
@@ -634,9 +653,11 @@ body {
 .button-orange {
   background: #1bc54b;
 }
+
 .button-orange:hover {
   background: #0a481c;
 }
+
 .button-orange:active {
   background: #073615;
 }
@@ -655,6 +676,7 @@ body {
   line-height: 1.414em;
   max-width: 60ch;
 }
+
 .accordion .fas {
   margin-left: 1rem;
   color: #1bc54b;
@@ -703,7 +725,6 @@ body {
   font-weight: 900;
   color: #1bc54b;
   line-height: 1em;
-  max-width: 60ch;
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -718,7 +739,6 @@ body {
   font-weight: 400;
   color: #272a31;
   line-height: 1.414em;
-  max-width: 60ch;
   border: #d3d3d3 0.1rem solid;
   padding: 1em 1.999rem;
   background: #fff;
@@ -748,10 +768,12 @@ body {
   border-top: rgba(39, 42, 49, 0.2) 1px solid;
   border-bottom: rgba(39, 42, 49, 0.2) 1px solid;
 }
+
 .logo-info__title {
   margin-bottom: 0.354em;
   text-align: center;
 }
+
 .logo-info p {
   font-family: "lato", sans-serif;
   font-size: 1.414rem;
@@ -763,6 +785,7 @@ body {
   text-align: center;
   margin-bottom: 1.414em;
 }
+
 .logo-info__logo-container {
   width: 100%;
   max-width: 50rem;
@@ -772,6 +795,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .logo-info__logo {
   position: relative;
   top: 0.3rem;
@@ -786,10 +810,12 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .past__title {
   margin-bottom: 0.354em;
   text-align: center;
 }
+
 .past__desc {
   font-family: "lato", sans-serif;
   font-size: 1.414rem;
@@ -801,6 +827,7 @@ body {
   text-align: center;
   margin-bottom: 1.414em;
 }
+
 .past__events-container {
   display: flex;
   flex-direction: column;
@@ -821,17 +848,22 @@ body {
   position: relative;
   transition: background-size 200ms ease-in-out;
 }
+
 .past__events--arg {
   background: #1bc54b url(../assets/img/past/argentina.jpg) 50% 50% no-repeat;
   background-size: 110%;
 }
+
 .past__events--pol {
   background: #1bc54b url(../assets/img/past/poland.jpg) 50% 20% no-repeat;
   background-size: 110%;
 }
-.past__events:hover, .past__events:active {
+
+.past__events:hover,
+.past__events:active {
   background-size: 117%;
 }
+
 .past__events::before {
   content: "";
   position: absolute;
@@ -841,6 +873,7 @@ body {
   bottom: 0;
   background: rgba(27, 197, 75, 0.5);
 }
+
 .past__year {
   font-family: "lato", sans-serif;
   font-size: 2.827rem;
@@ -869,8 +902,8 @@ body {
   }
 
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -878,7 +911,7 @@ body {
   }
 }
 
-/*---Media Queries --*/
+/* ---Media Queries -- */
 @media (max-width: 768px) {
   .only-desktop {
     display: none !important;
@@ -955,6 +988,7 @@ body {
     order: 1;
     margin-left: 1.999rem;
   }
+
   .navbar__item--SC::after {
     content: none;
   }
