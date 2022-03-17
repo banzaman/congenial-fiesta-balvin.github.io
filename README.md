@@ -14,11 +14,6 @@
 - HTML, CSS, JAVASCRIPT
 - BOOTSTRAP, SASS
 
-## Live Demo (if available)
-
-[Live Demo Link]()
-
-
 ## Getting Started
 
 ### Setup
