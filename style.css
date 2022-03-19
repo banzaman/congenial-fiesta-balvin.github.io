@@ -202,7 +202,7 @@ select {
 }
 
 .navbar__item:hover {
-  color: #1bc54b;
+  color: rgb(236, 82, 66);
 }
 
 .navbar__item--active {
@@ -271,7 +271,7 @@ select {
   font-family: "lato", sans-serif;
   font-size: 1.999rem;
   font-weight: 400;
-  color: #1bc54b;
+  color: rgb(236, 82, 66);
   line-height: 1.414em;
   max-width: 60ch;
   margin-bottom: 0.5em;
@@ -280,12 +280,11 @@ select {
 .home__title h1 {
   background: url(../assets/img/green-bg.jpg) 50% 50% no-repeat;
   background-size: cover;
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: "cocogoose", "lato", sans-serif;
   font-size: 3.998rem;
   font-weight: 900;
-  color: #1bc54b;
+  color: rgb(236, 82, 66);
   line-height: 1em;
   max-width: 60ch;
   margin-bottom: 0.5em;
@@ -342,7 +341,7 @@ select {
   top: 0;
   width: 100%;
   margin: 1rem 0;
-  background: rgba(27, 197, 75, 0.75);
+  background: rgb(236, 82, 66);
   padding: 1.999em 1.414rem;
   display: flex;
   flex-direction: column;
@@ -487,7 +486,7 @@ select {
   font-family: "lato", sans-serif;
   font-size: 1.414rem;
   font-weight: 500;
-  color: #1bc54b;
+  color: rgb(236, 82, 66);
   line-height: 1.414em;
   max-width: 60ch;
   font-style: italic;
@@ -723,7 +722,7 @@ select {
   font-family: "cocogoose", "lato", sans-serif;
   font-size: 3.998rem;
   font-weight: 900;
-  color: #1bc54b;
+  color: rgb(236, 82, 66);
   line-height: 1em;
   margin-bottom: 0.5em;
   text-align: center;
@@ -984,7 +983,7 @@ select {
   }
 
   .navbar__item--SC {
-    border: #1bc54b 0.2rem solid;
+    border: rgb(236, 82, 66) 0.2rem solid;
     order: 1;
     margin-left: 1.999rem;
   }
