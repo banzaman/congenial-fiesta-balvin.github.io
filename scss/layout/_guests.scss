@@ -1,0 +1,101 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+
+.guests {
+  padding: $s-xxl-em $s-xl;
+  background: $light-color;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: $s-xxs-em;
+  }
+
+  &__list {
+    @include mq.media('>=tablet') {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $s-md;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    margin-bottom: $s-xxl-em;
+    transition:
+      visibility 1ms ease-in-out,
+      opacity $speed1 ease-in-out,
+      height $speed1 ease-in-out,
+      margin $speed1 ease-in-out,;
+
+    @include mq.media('>=tablet') {
+      flex: 1 0 45%;
+    }
+
+    &--collapse {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      margin: 0;
+
+      @include mq.media('>=tablet') {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        margin-bottom: $s-xxl-em;
+      }
+    }
+  }
+
+  &__img-container {
+    min-width: 12rem;
+    min-height: 12rem;
+    position: relative;
+    margin-right: $s-xl;
+  }
+
+  &__decor-img {
+    display: block;
+    width: 55%;
+    height: 55%;
+    background: $primary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__img {
+    z-index: 2;
+    position: absolute;
+    width: 87%;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__name {
+    @include font-styler($color: $secondary-color, $weight: 700, $size: $s-xl);
+
+    margin-bottom: $s-xs-em;
+  }
+
+  &__role {
+    @include font-styler($color: $primary-color, $weight: 500);
+
+    font-style: italic;
+    margin-bottom: $s-sm-em;
+  }
+
+  &__desc {
+    @include font-styler($size: $s-md, $line-height: $s-lg);
+  }
+
+  &__accordion {
+    @include mq.media('>=tablet') {
+      display: none;
+    }
+  }
+}

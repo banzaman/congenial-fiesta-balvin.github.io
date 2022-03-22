@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+
+.title-decor {
+  display: block;
+  width: 4rem;
+  height: 0.2rem;
+  background: $primary-color;
+  margin-bottom: $s-xl-em;
+}
+
+.title-decor--small {
+  width: 3rem;
+  background: $accent-color;
+  margin-bottom: $s-sm-em;
+}

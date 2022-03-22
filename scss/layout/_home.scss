@@ -1,0 +1,98 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+
+.home {
+  min-height: 90vh;
+  padding: $s-llg-em $s-xl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../assets/img/yosemite-1.jpg) 50% 40% no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+
+  &__title-bg-1 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: url(../assets/img/home/home-mobile.png) 50% 15% no-repeat;
+    background-size: contain;
+    min-height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+
+    @include mq.media('>=tablet') {
+      background: url(../assets/img/home/home-desktop.png) 50% 25% no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__title-bg-2 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    // background-color: rgba($light-color, 0.8);
+    background: linear-gradient(-10deg, rgba($light-color, 1) 45%, rgba($light-color, 0.5));
+    min-height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+
+  &__title {
+    & h2 {
+      @include font-styler ($lato, $s-xl, $color: $primary-color);
+
+      margin-bottom: $s-xs-em;
+
+      @include mq.media('>=tablet') {
+        font-size: $s-xxl;
+      }
+    }
+
+    & h1 {
+      background: url(../assets/img/green-bg.jpg) 50% 50% no-repeat;
+      background-size: cover;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+
+      @include font-styler ($cocogoose, $s-xxxl, 900, $line-height: $s-md-em, $color: $primary-color);
+
+      margin-bottom: $s-xs-em;
+
+      @include mq.media('>=tablet') {
+        font-size: $s-llg;
+      }
+    }
+  }
+
+  &__desc {
+    @include font-styler;
+
+    border: $light-color 0.3rem solid;
+    padding: 1em $s-xl;
+    background: $accent-lighter-color;
+    margin-bottom: $s-xl;
+  }
+
+  &__date {
+    @include font-styler ($cocogoose, $s-xl, 900, $color: $secondary-color);
+
+    margin-bottom: $s-md;
+
+    @include mq.media('>=tablet') {
+      font-size: $s-xxl;
+    }
+  }
+
+  &__location {
+    @include font-styler;
+
+    @include mq.media('>=tablet') {
+      font-size: $s-xl;
+    }
+  }
+}

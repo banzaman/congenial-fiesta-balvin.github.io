@@ -1,0 +1,54 @@
+// Colors
+
+$primary-color: #1bc54b;
+$secondary-color: #272a31;
+$accent-color: #d3d3d3;
+$accent-lighter-color: #f7f7f7;
+$dark-color: #000;
+$light-color: #fff;
+$primary-color-d: #0a481c;
+$primary-color-2d: #073615;
+
+// Spacing (Augmented Forth)
+
+$s-none: 0;
+$s-xxs: 0.354rem;
+$s-xs: 0.5rem;
+$s-sm: 0.707rem;
+$s-md: 1rem;
+$s-lg: 1.414rem;
+$s-xl: 1.999rem;
+$s-xxl: 2.827rem;
+$s-xxxl: 3.998rem;
+$s-llg: 5.653rem;
+$s-xll: 7.993rem;
+
+$s-none-em: 0;
+$s-xxs-em: 0.354em;
+$s-xs-em: 0.5em;
+$s-sm-em: 0.707em;
+$s-md-em: 1em;
+$s-lg-em: 1.414em;
+$s-xl-em: 1.999em;
+$s-xxl-em: 2.827em;
+$s-xxxl-em: 3.998em;
+$s-llg-em: 5.653em;
+$s-xll-em: 7.993em;
+
+// fonts-variables
+
+$cocogoose: 'cocogoose', 'lato', sans-serif;
+$lato: 'lato', sans-serif;
+
+// Speed for transitions
+
+$speed1: 200ms;
+$speed2: 500ms;
+
+// Custom Media Queries
+
+$breakpoints: (
+  'phone': 32em,
+  'tablet': 76.8em,
+  'desktop': 102.4em
+);

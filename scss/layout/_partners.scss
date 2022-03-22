@@ -1,0 +1,54 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+
+.partners {
+  padding: $s-xl-em $s-xl;
+  background: $secondary-color;
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq.media('>=tablet') {
+    padding: $s-xl-em $s-xl $s-xxxl-em;
+  }
+
+  &__title {
+    margin-bottom: $s-xxs-em;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: $s-md 0;
+
+    @include mq.media('>=tablet') {
+      justify-content: space-between;
+      align-content: space-between;
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+  }
+
+  &__img-container {
+    flex: 0 0 33.333%;
+    padding: 0 $s-sm-em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+
+    @include mq.media('>=tablet') {
+      flex: 0 0 20%;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    max-height: 6.5rem;
+    margin: 0 auto;
+  }
+}

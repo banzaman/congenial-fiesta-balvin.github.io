@@ -1,0 +1,67 @@
+@use '../abstracts/' as *;
+
+.toggler {
+  cursor: pointer;
+  width: 2.8rem;
+  height: 0.3rem;
+  background: $secondary-color;
+  position: relative;
+  top: 0;
+  transition:
+    transform $speed1 ease-in-out,
+    top $speed1 ease-in-out,;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    background: $secondary-color;
+    top: -0.8rem;
+    opacity: 1;
+    transition: opacity $speed1 ease-in-out,;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2.8rem;
+    height: 0.3rem;
+    background-color: $secondary-color;
+    top: 0.8rem;
+    transition:
+      transform $speed1 ease-in-out,
+      background-color $speed1 ease-in-out,
+      top $speed1 ease-in-out,;
+  }
+
+  &--scrolled {
+    background-color: $light-color;
+
+    &::after {
+      background-color: $light-color;
+    }
+
+    &::before {
+      background-color: $light-color;
+    }
+  }
+
+  &--active {
+    background-color: $secondary-color;
+    transform: rotate(135deg);
+
+    &::after {
+      background-color: $secondary-color;
+      opacity: 0;
+    }
+
+    &::before {
+      background-color: $secondary-color;
+      transform: rotate(90deg);
+      top: 0;
+    }
+  }
+}

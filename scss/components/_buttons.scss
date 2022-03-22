@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+.button {
+  text-decoration: none;
+  padding: $s-lg-em $s-xxl;
+
+  @include font-styler($size: $s-xl, $color: $light-color);
+}
+
+.button-orange {
+  background: $primary-color;
+
+  &:hover {
+    background: $primary-color-d;
+  }
+
+  &:active {
+    background: $primary-color-2d;
+  }
+}

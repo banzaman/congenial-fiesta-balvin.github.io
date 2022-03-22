@@ -1,0 +1,39 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $s-xl;
+  column-gap: 8%;
+  $color: $secondary-color;
+
+  @include mq.media('>=tablet') {
+    justify-content: space-between;
+  }
+
+  &--dark {
+    @include mq.media('>=tablet') {
+      background-color: $secondary-color;
+      color: $light-color;
+    }
+  }
+
+  &__img {
+    // flex: 1 0 29%;
+    width: fit-content;
+
+    & img {
+      max-height: 10rem;
+    }
+  }
+
+  &__desc {
+    @include font-styler ($size: $s-md, $color: inherit);
+
+    @include mq.media('>=tablet') {
+      font-size: $s-lg;
+    }
+  }
+}

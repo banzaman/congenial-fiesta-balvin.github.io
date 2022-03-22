@@ -1,0 +1,18 @@
+@use '../vendors/include-media' as mq;
+@use '../abstracts/' as *;
+
+.mw-container {
+  @include max-width;
+}
+
+.only-mobile {
+  @include mq.media('>=tablet') {
+    display: none !important;
+  }
+}
+
+.only-desktop {
+  @include mq.media('<tablet') {
+    display: none !important;
+  }
+}
