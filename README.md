@@ -34,9 +34,9 @@ For live share here is the [link](https://banzaman.github.io/congenial-fiesta-ba
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/banzaman)
-- Twitter: [@twitterhandle](https://twitter.com/banzamarq10)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mark-rubanza-anderson-4399a2211/)
+- GitHub: [banzaman](https://github.com/banzaman)
+- Twitter: [@banzamarq25](https://twitter.com/banzamarq10)
+- LinkedIn: [Mark Rubanza Anderson](https://www.linkedin.com/in/mark-rubanza-anderson-4399a2211/)
 
 
 ## 🤝 Contributing
