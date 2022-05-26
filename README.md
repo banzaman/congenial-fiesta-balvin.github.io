@@ -13,6 +13,7 @@
 
 - HTML, CSS, JAVASCRIPT
 - BOOTSTRAP, SASS
+- VSCODE, GIT
 
 ## Live share 
 
