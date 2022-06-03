@@ -14,6 +14,7 @@
 - HTML, CSS, JAVASCRIPT
 - BOOTSTRAP, SASS
 - VIRTUAL STUDIO CODE, GIT
+- ETC
 
 ## Live share 
 
@@ -28,6 +29,7 @@ For live share here is the [link](https://banzaman.github.io/congenial-fiesta-ba
 - In your local PC, open your terminal in the folder you would like to clone the project.
 - Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/banzaman/congenial-fiesta-balvin.github.io`
 - On the terminal, navigate into the directory like so: `cd congenial-fiesta-balvin.github.io`
+- Happy Review
 
 
 
