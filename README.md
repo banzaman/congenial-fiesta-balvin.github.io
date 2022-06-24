@@ -13,6 +13,7 @@
 
 - HTML, CSS, JAVASCRIPT
 - BOOTSTRAP, SASS
+- GIT, GITHUB
 
 ## Live share 
 
